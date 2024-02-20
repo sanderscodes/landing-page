@@ -2,6 +2,12 @@
     nav {
         padding: 24px;
     }
+    &__logo {
+        img {
+
+        }
+    }
+
 
    
 
@@ -17,5 +23,10 @@
                     margin-bottom: 3px;
                 }
             }
+    }
+}
+&__links {
+    a {
+        font-size: $font-sm;
     }
 }
