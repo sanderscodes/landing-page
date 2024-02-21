@@ -4,29 +4,34 @@
     }
     &__logo {
         img {
-
+            /* Styles for logo image */
         }
     }
 
-
-   
-
     &__menu {  // mobile menu
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: $darkBlue;
 
-            > span {
-                display: block;
-                width: 26px;
-                height: 2px;
-                background: $darkBlue;
-
-                &:not(:last-child){
-                    margin-bottom: 3px;
-                }
+            &:not(:last-child){
+                margin-bottom: 3px;
             }
+        }
     }
-}
-&__links {
-    a {
+
+    /* Move the &__links selector inside the .header selector */
+    &__links {
+        a {
+            font-size: $font-sm;
+            color: $grayishBlue;
+        }
+    }
+    &__cta {
         font-size: $font-sm;
+        color: $white;
     }
 }
+
+
