@@ -43,6 +43,17 @@ button, .button {
     border: 0;
     border-radius: 50px;
     cursor: pointer;
-    color: white;
+    color:$white;
     font-weight: 400;
+}
+// visability
+.hide-for-mobile {
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+.hide-for-desktop {
+    @include breakpoint-up(large){
+        display: none;
+    }
 }
