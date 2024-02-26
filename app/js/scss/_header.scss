@@ -1,6 +1,6 @@
 .header {
     &.open {
-           .header__menu {
+           .header__toggle {
             > span:first-child {
                 transform: rotate(45deg);
             }
@@ -24,7 +24,8 @@
         background-image: linear-gradient($darkBlue, transparent);
     }
     nav {
-        padding: 1.0625rem 1.5rem;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
     }
     &__logo {
         img {
@@ -33,7 +34,7 @@
         }
     }
 
-    &__menu {  // mobile menu
+    &__toggle {  // mobile menu
         > span {
             display: block;
             width: 26px;
@@ -48,6 +49,20 @@
         }
 
        
+    }
+    &__menu {
+        background: $white;
+        margin: 0px 1.5rem;
+        padding: 1.625rem;
+        border-radius: 3px;
+
+
+        a {
+            display: block;
+            padding: 0.625rem;
+            color: darkblue;
+            text-align: center;
+        }
     }
 
     /* Move the &__links selector inside the .header selector */
