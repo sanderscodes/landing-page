@@ -1,3 +1,7 @@
+.has-fade {
+  visibility: hidden;
+}
+
 @keyframes fade-in {
   from {
     visibility: hidden;
@@ -8,11 +12,12 @@
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
 .fade-in {
-  animation: fade-in 300ms ease-in-out forwards;
+  animation: fade-in 200ms ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -30,7 +35,7 @@
   }
 }
 .fade-out {
-  animation: fade-out 300ms ease-in-out forwards;
+  animation: fade-out 200ms ease-in-out forwards;
 }
 
 html {
@@ -50,6 +55,9 @@ body {
   font-weight: 300;
   color: hsl(233, 8%, 62%);
   line-height: 1.3;
+}
+body.noscroll {
+  overflow: hidden;
 }
 
 a, a:visited, a:hover {
@@ -109,15 +117,17 @@ button, .button {
   transform: rotate(-45deg);
 }
 .header .overlay {
+  opacity: 0;
   position: fixed;
-  top: 3.75rem;
+  top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: hsl(233, 26%, 24%);
   background-image: linear-gradient(hsl(233, 26%, 24%), transparent);
 }
 .header nav {
+  position: relative;
+  background-color: white;
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
 }
@@ -143,12 +153,12 @@ button, .button {
   transform: translateX(-50%);
   background: hsl(0, 0%, 100%);
   padding: 1.625rem;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .header__menu a {
   display: block;
   padding: 0.625rem;
-  color: darkblue;
+  color: hsl(233, 26%, 24%);
   text-align: center;
 }
 .header__links a {
