@@ -26,7 +26,8 @@
             order: 2;
             height: 41rem;
             background-image: none;
-            //background-image: url('/images/bg-intro-desktop.svg');
+             //background-image: url('/images/bg-intro-desktop.svg');
+      //background-position: left center;
         }
 
 
@@ -34,12 +35,12 @@
             @include breakpoint-up(large) {
                 content: "";
                 position: absolute;
-                width: 100%;
+                width: 150%;
                 height: 100%;
-                background-image: url('/images/image-mockups.png');
-                background-size: 93%;
+                background-image: url('/images/bg-intro-desktop.svg');
+                background-size: 122%;
                 background-repeat: no-repeat;
-                background-position: center bottom;
+                background-position: 0% 83%;
             }
             }
             &::after {
